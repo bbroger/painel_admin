@@ -1,0 +1,32 @@
+body {
+  	padding-top: 5rem;
+  	background-color: #EFF5FB !important;
+}
+.starter-template {
+	padding: 3rem 1.5rem;
+	text-align: center;
+}
+h1{
+	margin-bottom: 20px !important;
+}
+h2{
+	color: #0069d9;
+	margin-bottom: 20px !important;
+}
+.recuperaSenha{
+	margin-top: 20px;
+}
+.botoes{
+	display: flex;
+	justify-content: center;
+}
+.btnCadastrar{
+	margin-right: 20px;
+}
+.btnEditar{
+	margin-right: 20px !important;
+}
+.botoesVisualizar{
+	display: flex;
+	justify-content: center;
+}
