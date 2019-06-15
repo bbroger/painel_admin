@@ -71,6 +71,30 @@
 							</select>
 						</div>
 					</div>
+				<?php }else{ ?>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
+						<div class="col-sm-10">
+							<input type="password" name="senha" class="form-control" id="inputPassword3" placeholder="Senha" disabled="disabled">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="nivel_acesso" class="col-sm-2 control-label">Nível de acesso</label>
+						<div class="col-sm-10">
+							<select class="form-control" name="nivel_acesso">
+								<option value="<?php echo $usuario['nivel_acesso_id']?>">
+									
+									<?php if($usuario['nivel_acesso_id'] == 1){
+										echo "Administrativo";
+									}else{
+										echo "Usuário";
+									}?>
+								</option>
+							</select>
+						</div>
+					</div>
+
+
 				<?php } ?>
 
 				<input type="hidden" name="id" class="form-control" id="id_usuario" value="<?php echo $usuario['id']?>">

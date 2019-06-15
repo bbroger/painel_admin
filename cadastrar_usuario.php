@@ -42,7 +42,7 @@
             <div class="form-group">
               <label for="login" class="col-sm-2 control-label">Login</label>
               <div class="col-sm-12">
-                <input type="text" name="login" class="form-control" id="nome" placeholder="Login" required="required">
+                <input type="text" name="login" class="form-control" id="login" placeholder="Login" required="required">
               </div>
             </div>
 
@@ -68,7 +68,7 @@
                 <button type="submit" name="btnCadastrar" class="btn btn-success" value="cadastrar">Cadastrar</button>
               </div>
               <div class="btnVoltar">
-                <a href="administrativo.php"><input type="button" name="btnVoltar" class="btn btn-secondary" value="voltar"></input></a>
+                <a href="administrativo.php?link=2"><input type="button" name="btnVoltar" class="btn btn-secondary" value="voltar"></input></a>
               </div>
             </div>
           </form>

@@ -1,6 +1,7 @@
 <?php
     require_once("conexao.php");
     session_start();
+    
     //Não permite acessar a página diretamente pelo endereço
     $btnCadastrar = filter_input(INPUT_POST, 'btnCadastrar', FILTER_SANITIZE_STRING);
 
@@ -23,16 +24,16 @@
             $resultado_usuario = mysqli_query($conn, $queryInsert);
 
             if($resultado_usuario){
-                $_SESSION['msg'] = "<p class='alert alert-success alert-dismissible'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Usuário cadastrado com sucesso.</p>";
+                $_SESSION['msg'] = "<p class='alert alert-success alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Usuário cadastrado com sucesso.</p>";
                 header("Location: ../administrativo.php?link=2");
             }else{
-                $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Não foi possível cadastrar esse usuário, tente novamente..</p>";
+                $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Não foi possível cadastrar esse usuário, tente novamente..</p>";
                 header("Location: ../administrativo.php?link=2");
             }
         }
 
     }else{
-        $_SESSION['msg'] = "<p class='alert alert-danger alert-dismissible'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Página não encontrada.</p>";
+        $_SESSION['msg'] = "<p class='alert alert-danger alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Página não encontrada.</p>";
         header("Location: ../login.php");
     }
 ?>

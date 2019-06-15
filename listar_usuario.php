@@ -11,14 +11,19 @@
                 FROM painel_admin.usuarios
                 INNER JOIN painel_admin.nivel_acesso
                 WHERE nivel_acesso.id = usuarios.nivel_acesso_id; ";
+
     $resultado = mysqli_query($conn, $sql);
     @$rowCount = mysqli_num_rows($resultado);
 ?>
 
 <div class="container theme-showcase" role="main">
-   <div class="page-header text-center ">
+  <div class="page-header text-center ">
       <h1>Lista de Usuários</h1>
   </div>
+  <div class="incluirUsuario">
+      <a href="administrativo.php?link=3"><button type="button" class="btn btn-success btn-sm mr-2">Incluir Usuário</button></a>
+  </div>
+
   <div class="row">
     <div class="col-md-12 table-responsive">
       <div class="msg">
@@ -48,9 +53,9 @@
                     <td class="text-center"><?php echo $usuario['email']; ?></td>
                     <td class="text-center"><?php echo $usuario['nivel_acesso']; ?></td>
                     <td class="text-center botoes">
-                        <a href="administrativo.php?link=4&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-success btn-sm mr-2">Visualizar</button></a>
+                        <a href="administrativo.php?link=4&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-info btn-sm mr-2">Visualizar</button></a>
                         <a href="administrativo.php?link=5&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-warning btn-sm mr-2">Editar</button></a>
-                        <a href="administrativo.php?link=6&id=<?php echo $usuario['id'];?>"><button type="button" data-toggle="modal" data-target="#confirm" class="btn btn-danger btn-sm mr-2" name="btnExcluir" value="excluir">Excluir</button></a>
+                        <a class="delete" id="<?php echo $usuario['id'];?>"><button type="button" class="btn btn-danger btn-sm mr-2" name="btnExcluir" value="excluir">Excluir</button></a>
                     </td>
                 </tr>
             <?php }?>
@@ -65,3 +70,23 @@
 </div>
 </div> <!-- /container -->
 
+<!-- Modal -->
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Excluir usuário</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Deseja realmente excluir esse usuário?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-confirmar">Confirmar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button> 
+      </div>
+    </div>
+  </div>
+</div>

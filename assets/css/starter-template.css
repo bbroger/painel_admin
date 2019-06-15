@@ -30,3 +30,7 @@ h2{
 	display: flex;
 	justify-content: center;
 }
+.incluirUsuario{
+	margin-bottom: 20px !important;
+	text-align: right;
+}
