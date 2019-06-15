@@ -34,6 +34,6 @@
 
     }else{
         $_SESSION['msg'] = "<p class='alert alert-danger alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Página não encontrada.</p>";
-        header("Location: ../login.php");
+        header("Location: ../administrativo.php?link=0");
     }
 ?>

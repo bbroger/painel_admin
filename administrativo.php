@@ -1,14 +1,6 @@
 <?php 
   session_start();
   require_once("processa/conexao.php");
-
-  if( !isset($_SESSION['id']) || !isset($_SESSION['nome']) ){
-    unset($_COOKIE['session']);
-    unset($_SESSION['id']);
-    unset($_SESSION['nome']);
-    $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Preencha os campos Usuário e Senha</p>";
-    header("Location: login.php");
-  }
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -26,18 +18,23 @@
       <?php
         require_once("menu_admin.php");
 
+        $pag[0] = "index.php";
         $pag[1] = "bem_vindo.php";
         $pag[2] = "listar_usuario.php";
         $pag[3] = "cadastrar_usuario.php";
         $pag[4] = "visualizar_usuario.php";
         $pag[5] = "editar_usuario.php";
         $pag[6] = "excluir_usuario.php";
+        $pag[7] = "recuperar_senha.php";
 
         if(isset($_GET['link'])){
-
           $link = $_GET['link'];
           if(file_exists($pag[$link])){
-            require_once($pag[$link]);
+            if($pag[$link] == 7){
+              $pag[7];
+            }else{
+              require_once($pag[$link]);
+            }
           }else{
             require_once("bem_vindo.php");
           }

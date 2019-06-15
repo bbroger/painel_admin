@@ -1,5 +1,5 @@
 <?php 
-session_start();
+@session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -39,10 +39,10 @@ session_start();
 
                     <input class="btn btn-lg btn-primary btn-block" type="submit" name="btnLogin" value="Acessar">
                 </form>
-                <div class="recuperaSenha text-center">
-                    <label for="recuperaSenha">Recupere sua senha clicando <a href="recupera_senha.php"><b>aqui</b>.</a></label>
-                </div>
             </div>
+        </div>
+        <div class="recuperaSenha text-center">
+            <label>Recupere sua senha clicando <a href="administrativo.php?link=7"><b>aqui</b>.</a></label>
         </div>	
     </div> <!-- /container -->
 

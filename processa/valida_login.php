@@ -25,10 +25,10 @@
             if($resultado_usuario){
                 $row_usuario =  mysqli_fetch_assoc($resultado_usuario);
 
-                //var_dump(password_get_info($row_usuario['senha']), $row_usuario);
+                //var_dump(password_get_info($row_usuario['senha']));
                 //exit;
 
-                if((password_verify($senha, $row_usuario['senha'])) && $usuario === $row_usuario['login']){
+                if(password_verify($senha, $row_usuario['senha']) && $usuario === $row_usuario['login']){
                     $_SESSION['id'] = $row_usuario['id'];
                     $_SESSION['nome'] = utf8_encode($row_usuario['nome']);
                     $_SESSION['email'] = $row_usuario['email'];
@@ -38,20 +38,20 @@
 
                 }else{
                     $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Usuário ou senha incorretos, tente novamente..</p>";
-                    header("Location: ../login.php");
+                    header("Location: ../administrativo.php?link=0");
                 }
             }else{
                     $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Usuário ou senha incorretos, tente novamente..</p>";
-                    header("Location: ../login.php");
+                    header("Location: ../administrativo.php?link=0");
             }
 
         }else{
             $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Preencha os campos Usuário e Senha</p>";
-            header("Location: ../login.php");
+            header("Location: ../administrativo.php?link=0");
         }
 
     }else{
         $_SESSION['msg'] = "<p class='alert alert-danger alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Página não encontrada.</p>";
-        header("Location: ../login.php");
+        header("Location: ../administrativo.php?link=0");
     }
 ?>
