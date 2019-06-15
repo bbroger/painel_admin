@@ -26,39 +26,43 @@
           <form class="form-horizontal" method="POST" action="processa/cad_usuario.php">
             
             <div class="form-group">
-              <label for="nome" class="col-sm-2 control-label">Nome</label>
+              <label for="nome" class="col-sm-2 control-label"><b>Nome</b></label>
               <div class="col-sm-12 ">
                 <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome completo" required="required">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+              <label for="inputEmail3" class="col-sm-2 control-label"><b>Email</b></label>
               <div class="col-sm-12">
                 <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email" required="required">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="login" class="col-sm-2 control-label">Login</label>
+              <label for="login" class="col-sm-2 control-label"><b>Login</b></label>
               <div class="col-sm-12">
                 <input type="text" name="login" class="form-control" id="login" placeholder="Login" required="required">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
+              <label for="inputPassword3" class="col-sm-2 control-label"><b>Senha</b></label>
               <div class="col-sm-12">
                 <input type="password" name="senha" class="form-control" id="inputPassword3" placeholder="Senha">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="nivel_acesso" class="col-sm-2 control-label">Nível de acesso</label>
+              <label for="nivel_acesso" class="col-sm-2 control-label"><b>Nível de acesso</b></label>
               <div class="col-sm-12">
                 <select class="form-control" name="nivel_acesso">
+                  <?php if($_SESSION['nivel_acesso'] == 1) {?> 
                   <option value="1">Administrativo</option>
                   <option value="2">Usuário</option>
+                <?php }else{?>
+                  <option value="2">Usuário</option>
+                <?php } ?>
                 </select>
               </div>
             </div>

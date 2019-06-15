@@ -19,7 +19,7 @@
             //echo $password;
             //exit;
             //Pesquisar o usuário no BD
-            $result_usuario = "SELECT id, nome, email, senha, login FROM usuarios WHERE login = '$usuario' LIMIT 1";
+            $result_usuario = "SELECT id, nome, email, senha, login, nivel_acesso_id FROM usuarios WHERE login = '$usuario' LIMIT 1";
             $resultado_usuario = mysqli_query($conn, $result_usuario);
 
             if($resultado_usuario){
@@ -32,6 +32,7 @@
                     $_SESSION['id'] = $row_usuario['id'];
                     $_SESSION['nome'] = utf8_encode($row_usuario['nome']);
                     $_SESSION['email'] = $row_usuario['email'];
+                    $_SESSION['nivel_acesso'] = $row_usuario['nivel_acesso_id'];
 
                     header("Location: ../administrativo.php");
 

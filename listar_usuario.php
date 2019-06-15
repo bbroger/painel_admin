@@ -55,7 +55,9 @@
                     <td class="text-center botoes">
                         <a href="administrativo.php?link=4&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-info btn-sm mr-2">Visualizar</button></a>
                         <a href="administrativo.php?link=5&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-warning btn-sm mr-2">Editar</button></a>
+                        <?php if($_SESSION['nivel_acesso'] == 1) {?>  
                         <a class="delete" id="<?php echo $usuario['id'];?>"><button type="button" class="btn btn-danger btn-sm mr-2" name="btnExcluir" value="excluir">Excluir</button></a>
+                      <?php } ?>
                     </td>
                 </tr>
             <?php }?>
