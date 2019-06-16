@@ -62,9 +62,9 @@
                 </tr>
             <?php }?>
             <?php }else{
-            echo"<div class='alert alert-primary text-center' role='alert'>
-            Ainda não existem usuários cadastrados.
-            </div>";
+                echo"<div class='alert alert-primary text-center' role='alert'>
+                Ainda não existem usuários cadastrados.
+                </div>";
             }?>
             </tbody>
         </table>
