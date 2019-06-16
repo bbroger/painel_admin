@@ -4,7 +4,7 @@
         unset($_SESSION['id']);
         unset($_SESSION['nome']);
         $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Preencha os campos Usuário e Senha</p>";
-        header("Location: login.php");
+        header("Location: index.php");
     }
 
     $sql = " SELECT usuarios.id, usuarios.nome, usuarios.email, usuarios.login, usuarios.nivel_acesso_id as id_acesso, nivel_acesso.nivel_acesso
@@ -56,7 +56,7 @@
                         <a href="administrativo.php?link=4&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-info btn-sm mr-2">Visualizar</button></a>
                         <a href="administrativo.php?link=5&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-warning btn-sm mr-2">Editar</button></a>
                         <?php if($_SESSION['nivel_acesso'] == 1) {?>  
-                        <a class="delete" id="<?php echo $usuario['id'];?>"><button type="button" class="btn btn-danger btn-sm mr-2" name="btnExcluir" value="excluir">Excluir</button></a>
+                        <a class="delete" id="<?php echo $usuario['id'];?>"><button type="button" class="btn btn-danger btn-sm mr-2 btnExcluir" name="btnExcluir" value="excluir">Excluir</button></a>
                       <?php } ?>
                     </td>
                 </tr>

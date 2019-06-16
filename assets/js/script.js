@@ -1,8 +1,8 @@
 function excluirUsuario(){
   $('a.delete').click(function() {
 
-      var id = $(this).prop('id');
-      var data = 'id=' + id ;
+        var id = $(this).prop('id');
+        var btn = $('.btnExcluir').prop('name');
       
       $('#confirm-delete').modal('show'); 
 
@@ -10,7 +10,7 @@ function excluirUsuario(){
           $.ajax({
               type: "POST",
               url: "processa/excluir_usuario.php",
-              data: data,
+              data: {'id':id, 'btn':btn},
               cache: false,
               success: function() {
                 $('#btnConfirmar').prop("disabled", true);
@@ -26,7 +26,7 @@ function excluirUsuario1(){
   $('a.delete1').click(function() {
 
       var id = $(this).prop('id');
-      var data = 'id=' + id ;
+      var btn = $('.btnExcluir').prop('name');
       
       $('#confirm-delete').modal('show'); 
 
@@ -34,7 +34,7 @@ function excluirUsuario1(){
         $.ajax({
             type: "POST",
             url: "processa/excluir_usuario.php",
-            data: data,
+            data: {'id':id, 'btn':btn},
             cache: false,
             success: function() {
               $('#btnConfirmar1').prop("disabled", true);

@@ -54,7 +54,7 @@
                     <?php if($_SESSION['nivel_acesso'] == 1) {?>
                         <div class="text-center">
                             <div class="text-center">
-                                <a class="delete1" id="<?php echo $usuario['id'];?>"><button type="button" class="btn btn-danger mr-2" name="btnExcluir" value="excluir">Excluir</button></a>
+                                <a class="delete1" id="<?php echo $usuario['id'];?>"><button type="button" class="btn btn-danger mr-2 btnExcluir" name="btnExcluir" value="excluir">Excluir</button></a>
                             </div>
                         </div>
                     <?php } ?>

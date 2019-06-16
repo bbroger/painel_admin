@@ -4,7 +4,7 @@
     unset($_SESSION['id']);
     unset($_SESSION['nome']);
     $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Preencha os campos Usuário e Senha</p>";
-    header("Location: login.php");
+    header("Location: index.php");
   }
   
 ?>
@@ -71,7 +71,7 @@
                         <button type="submit" name="btnCadastrar" class="btn btn-success" value="cadastrar">Cadastrar</button>
                       </div>
                       <div class="btnVoltar">
-                        <a href="administrativo.php?link=2"><input type="button" name="btnVoltar" class="btn btn-secondary" value="voltar"></input></a>
+                        <a href="administrativo.php?link=2"><input type="button" name="btnVoltar" class="btn btn-secondary" value="voltar"></a>
                       </div>
                     </div>
                 </form>
