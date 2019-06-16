@@ -38,20 +38,20 @@
 
                 }else{
                     $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Usuário ou senha incorretos, tente novamente..</p>";
-                    header("Location: ../administrativo.php?link=0");
+                    header("Location: ../index.php");
                 }
             }else{
                     $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Usuário ou senha incorretos, tente novamente..</p>";
-                    header("Location: ../administrativo.php?link=0");
+                    header("Location: ../index.php");
             }
 
         }else{
             $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Preencha os campos Usuário e Senha</p>";
-            header("Location: ../administrativo.php?link=0");
+            header("Location: .../index.php");
         }
 
     }else{
         $_SESSION['msg'] = "<p class='alert alert-danger alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Página não encontrada.</p>";
-        header("Location: ../administrativo.php?link=0");
+        header("Location: ../index.php");
     }
 ?>

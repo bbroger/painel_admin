@@ -18,7 +18,6 @@
       <?php
         require_once("menu_admin.php");
 
-        $pag[0] = "index.php";
         $pag[1] = "bem_vindo.php";
         $pag[2] = "listar_usuario.php";
         $pag[3] = "cadastrar_usuario.php";

@@ -29,7 +29,7 @@
 				Obrigado. <br />
 				Acesse nosso site novamente <a href='{$link}'>aqui</a>."
 			);
-			header('Location: ../administrativo.php?link=0');
+			header('Location: ../index.php');
 		}else{
 			//email não existe no banco - exibir modal
 			header('Location: ../administrativo.php?link=7');

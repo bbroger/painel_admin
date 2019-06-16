@@ -5,5 +5,5 @@
 
     $_SESSION['msg'] = "<p class='alert alert-success alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Deslogado com sucesso.</p>";
 
-    header("Location: ../administrativo.php?link=0");
+    header("Location: ../index.php");
 ?>
