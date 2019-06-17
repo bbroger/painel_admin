@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="assets/css/starter-template.css" rel="stylesheet">
+  <link href="../assets/css/starter-template.css" rel="stylesheet">
   <title>Painel Admin</title>
 </head>
   <body>
@@ -19,11 +19,11 @@
         require_once("menu_admin.php");
 
         $pag[1] = "bem_vindo.php";
-        $pag[2] = "listar_usuario.php";
-        $pag[3] = "cadastrar_usuario.php";
-        $pag[4] = "visualizar_usuario.php";
-        $pag[5] = "editar_usuario.php";
-        $pag[6] = "excluir_usuario.php";
+        $pag[2] = "usuario/listar_usuario.php";
+        $pag[3] = "usuario/cadastrar_usuario.php";
+        $pag[4] = "usuario/visualizar_usuario.php";
+        $pag[5] = "usuario/editar_usuario.php";
+        $pag[6] = "processa/excluir_usuario.php";
         $pag[7] = "recuperar_senha.php";
 
         if(isset($_GET['link'])){
@@ -44,7 +44,7 @@
       ?>
     </div>
     <!-- Optional JavaScript -->
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="../assets/js/script.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"

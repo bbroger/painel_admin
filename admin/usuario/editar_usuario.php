@@ -4,7 +4,7 @@
 		unset($_SESSION['id']);
 		unset($_SESSION['nome']);
 		$_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Preencha os campos Usuário e Senha</p>";
-		header("Location: index.php");
+		header("Location: ../index.php");
 	}
 
 	$id = $_GET['id'];
@@ -56,12 +56,6 @@
 				</div>
 
 				<?php if($admin['nivel_acesso_id'] == 1){?>
-					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-2 control-label"><b>Senha</b></label>
-						<div class="col-sm-12">
-							<input type="password" name="senha" class="form-control" id="inputPassword3" placeholder="Senha">
-						</div>
-					</div>
 					<div class="form-group">
 						<label for="nivel_acesso" class="col-sm-2 control-label"><b>Nível de acesso</b></label>
 						<div class="col-sm-12">

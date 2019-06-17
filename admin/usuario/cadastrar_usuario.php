@@ -4,7 +4,7 @@
     unset($_SESSION['id']);
     unset($_SESSION['nome']);
     $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Preencha os campos Usuário e Senha</p>";
-    header("Location: index.php");
+    header("Location: ../index.php");
   }
   
 ?>

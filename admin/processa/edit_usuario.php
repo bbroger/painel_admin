@@ -10,16 +10,16 @@
         $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
         $usuario = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
-        $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
+        //$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
         $nivel = filter_input(INPUT_POST, 'nivel_acesso', FILTER_SANITIZE_STRING);
 
-        $cripto = password_hash($senha, PASSWORD_DEFAULT);
+        //$cripto = password_hash($senha, PASSWORD_DEFAULT);
 
         //verifica se os campos usuario e senha foram preenchidos
         if(!empty($usuario) && !empty($nome)){
           
             //Realizar o update no banco
-            $queryUpdate = " UPDATE usuarios set nome = '$nome', email ='$email', senha = '$cripto', login ='$usuario', nivel_acesso_id = '$nivel', modified = NOW() WHERE id = '$id'; ";
+            $queryUpdate = " UPDATE usuarios set nome = '$nome', email ='$email', login ='$usuario', nivel_acesso_id = '$nivel', modified = NOW() WHERE id = '$id'; ";
 
             $resultado_usuario = mysqli_query($conn, $queryUpdate);
 
