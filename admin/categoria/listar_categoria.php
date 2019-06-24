@@ -45,11 +45,18 @@
             <?php while ($categoria =  mysqli_fetch_array($resultado)){?>
                 <tr id="<?php echo $categoria['id']; ?>">
                     <td class="text-center"><?php echo $categoria['nome_categoria']; ?></td>
-                    <td class="text-center"><?php echo $categoria['created']; ?></td>
-                    <td class="text-center"><?php echo $categoria['modified']; ?></td>
+                    <td class="text-center">
+                      <?php echo(date('d/m/Y H:i:s', strtotime($categoria['created']))); ?></td>
+                    <td class="text-center">
+                      <?php 
+                        if(!empty($categoria['modified'])){
+                          echo(date('d/m/Y H:i:s', strtotime($categoria['modified'])));
+                        }; 
+                      ?>
+                    </td>
                     <td class="text-center botoes">
                         <a href="administrativo.php?link=10&id=<?php echo $categoria['id']; ?>"><button type="button" class="btn btn-warning btn-sm mr-2">Editar</button></a> 
-                        <a class="delete" id="<?php echo $categoria['id'];?>"><button type="button" class="btn btn-danger btn-sm mr-2 btnExcluir" name="btnExcluir" value="excluir">Excluir</button></a>
+                        <a class="delete_categoria" id="<?php echo $categoria['id'];?>"><button type="button" class="btn btn-danger btn-sm mr-2 btnExcluir" name="btnExcluir" value="excluir">Excluir</button></a>
                     </td>
                 </tr>
             <?php }?>

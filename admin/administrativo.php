@@ -28,6 +28,7 @@
         $pag[8] = "categoria/cadastrar_categoria.php";
         $pag[9] = "categoria/listar_categoria.php";
         $pag[10] = "categoria/editar_categoria.php";
+        $pag[11] = "processa/excluir_categoria.php";
 
         if(isset($_GET['link'])){
           $link = $_GET['link'];

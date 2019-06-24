@@ -36,7 +36,7 @@
                         <button type="submit" name="btnCadastrar" class="btn btn-success" value="cadastrar">Cadastrar</button>
                       </div>
                       <div class="btnVoltar">
-                        <a href="administrativo.php?link=2"><input type="button" name="btnVoltar" class="btn btn-secondary" value="voltar"></a>
+                        <a href="administrativo.php?link=9"><input type="button" name="btnVoltar" class="btn btn-secondary" value="voltar"></a>
                       </div>
                     </div>
                 </form>
