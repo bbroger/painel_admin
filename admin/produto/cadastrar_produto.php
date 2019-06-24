@@ -22,7 +22,7 @@
                         }
                     ?>
                 </div>
-                <form class="form-horizontal" method="POST" action="processa/cad_produto.php">
+                <form class="form-horizontal" method="POST" action="processa/produto/cad_produto.php">
                 
                     <div class="form-group">
                       <label for="nome" class="col-sm-2 control-label"><b>Nome</b></label>
@@ -32,14 +32,14 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="descricaoCurta" class="col-sm-2 control-label"><b>Descrição Curta</b></label>
+                      <label for="descricaoCurta" class="col-sm-4 control-label"><b>Descrição Curta</b></label>
                       <div class="col-sm-12">
                         <input type="text" name="descricaoCurta" class="form-control" id="descricaoCurta" placeholder="Insira uma descrição curta" required="required">
                       </div>
                     </div>
 
                     <div class="form-group">
-                      <label for="descricaoLonga" class="col-sm-2 control-label"><b>Descrição Longa</b></label>
+                      <label for="descricaoLonga" class="col-sm-4 control-label"><b>Descrição Longa</b></label>
                       <div class="col-sm-12">
                         <input type="text" name="descricaoLonga" class="form-control" id="descricaoLonga" placeholder="Insira uma descrição longa" required="required">
                       </div>
@@ -82,7 +82,7 @@
                         <button type="submit" name="btnCadastrar" class="btn btn-success" value="cadastrar">Cadastrar</button>
                       </div>
                       <div class="btnVoltar">
-                        <a href="administrativo.php?link=2"><input type="button" name="btnVoltar" class="btn btn-secondary" value="voltar"></a>
+                        <a href="administrativo.php?link=13"><input type="button" name="btnVoltar" class="btn btn-secondary" value="voltar"></a>
                       </div>
                     </div>
                 </form>

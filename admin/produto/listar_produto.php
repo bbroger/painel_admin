@@ -7,10 +7,7 @@
         header("Location: ../index.php");
     }
 
-    $sql = " SELECT usuarios.id, usuarios.nome, usuarios.email, usuarios.login, usuarios.nivel_acesso_id as id_acesso, nivel_acesso.nivel_acesso
-                FROM painel_admin.usuarios
-                INNER JOIN painel_admin.nivel_acesso
-                WHERE nivel_acesso.id = usuarios.nivel_acesso_id; ";
+    $sql = " SELECT * FROM produtos; ";
 
     $resultado = mysqli_query($conn, $sql);
     @$rowCount = mysqli_num_rows($resultado);
@@ -18,10 +15,10 @@
 
 <div class="container theme-showcase" role="main">
   <div class="page-header text-center ">
-      <h1>Lista de Usuários</h1>
+      <h1>Lista de Produtos</h1>
   </div>
-  <div class="incluirUsuario">
-      <a href="administrativo.php?link=3"><button type="button" class="btn btn-success btn-sm mr-2">Incluir Usuário</button></a>
+  <div class="incluirProduto">
+      <a href="administrativo.php?link=12"><button type="button" class="btn btn-success btn-sm mr-2">Incluir Produto</button></a>
   </div>
 
   <div class="row">
@@ -38,32 +35,31 @@
         <table class="table table-hover">
             <thead>
               <tr>
-                <th class="text-center">Nome</th>
-                <th class="text-center">Usuário</th>
-                <th class="text-center">Email</th>
-                <th class="text-center">Acesso</th>
-                <th class="text-center">Ações</th>
+                <th class="text-center">IMAGEM</th>
+                <th class="text-center">ID</th>
+                <th class="text-center">NOME</th>
+                <th class="text-center">DESCRICAO</th>
             </tr>
             </thead>
             <tbody>
-            <?php while ($usuario =  mysqli_fetch_array($resultado)){?>
-                <tr id="<?php echo $usuario['id']; ?>">
-                    <td class="text-center"><?php echo $usuario['nome']; ?></td>
-                    <td class="text-center"><?php echo $usuario['login']; ?></td>
-                    <td class="text-center"><?php echo $usuario['email']; ?></td>
-                    <td class="text-center"><?php echo $usuario['nivel_acesso']; ?></td>
+            <?php while ($produto =  mysqli_fetch_array($resultado)){?>
+                <tr id="<?php echo $produto['id']; ?>">
+                    <td class="text-center"><?php echo $produto['imagem']; ?></td>
+                    <td class="text-center"><?php echo $produto['id']; ?></td>
+                    <td class="text-center"><?php echo $produto['nome']; ?></td>
+                    <td class="text-center"><?php echo $produto['descricao_curta']; ?></td>
                     <td class="text-center botoes">
-                        <a href="administrativo.php?link=4&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-info btn-sm mr-2">Visualizar</button></a>
-                        <a href="administrativo.php?link=5&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-warning btn-sm mr-2">Editar</button></a>
+                        <a href="administrativo.php?link=14&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-info btn-sm mr-2">Visualizar</button></a>
+                        <a href="administrativo.php?link=15&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-warning btn-sm mr-2">Editar</button></a>
                         <?php if($_SESSION['nivel_acesso'] == 1) {?>  
-                        <a class="delete" id="<?php echo $usuario['id'];?>"><button type="button" class="btn btn-danger btn-sm mr-2 btnExcluir" name="btnExcluir" value="excluir">Excluir</button></a>
+                        <a class="delete_produto" id="<?php echo $usuario['id'];?>"><button type="button" class="btn btn-danger btn-sm mr-2 btnExcluir" name="btnExcluir" value="excluir">Excluir</button></a>
                       <?php } ?>
                     </td>
                 </tr>
             <?php }?>
             <?php }else{
                 echo"<div class='alert alert-primary text-center' role='alert'>
-                Ainda não existem usuários cadastrados.
+                Ainda não existem produtos cadastrados.
                 </div>";
             }?>
             </tbody>

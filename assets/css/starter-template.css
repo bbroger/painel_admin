@@ -30,7 +30,9 @@ h2{
 	display: flex;
 	justify-content: center;
 }
-.incluirUsuario, .incluirCategoria{
+.incluirUsuario, 
+.incluirCategoria, 
+.incluirProduto{
 	margin-bottom: 20px !important;
 	text-align: right;
 }

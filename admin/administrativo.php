@@ -29,6 +29,11 @@
         $pag[9] = "categoria/listar_categoria.php";
         $pag[10] = "categoria/editar_categoria.php";
         $pag[11] = "processa/excluir_categoria.php";
+        $pag[12] = "produto/cadastrar_produto.php";
+        $pag[13] = "produto/listar_produto.php";
+        $pag[14] = "produto/visualizar_produto.php";
+        $pag[15] = "produto/editar_produto.php";
+        $pag[16] = "processa/excluir_produto.php";
 
         if(isset($_GET['link'])){
           $link = $_GET['link'];

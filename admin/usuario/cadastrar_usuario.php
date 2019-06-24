@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="nivel_acesso" class="col-sm-2 control-label"><b>Nível de acesso</b></label>
+                      <label for="nivel_acesso" class="col-sm-4 control-label"><b>Nível de acesso</b></label>
                       <div class="col-sm-12">
                         <select class="form-control" name="nivel_acesso">
                           <?php if($_SESSION['nivel_acesso'] == 1) {?> 
