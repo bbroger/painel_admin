@@ -25,6 +25,9 @@
         $pag[5] = "usuario/editar_usuario.php";
         $pag[6] = "processa/excluir_usuario.php";
         $pag[7] = "recuperar_senha.php";
+        $pag[8] = "categoria/cadastrar_categoria.php";
+        $pag[9] = "categoria/listar_categoria.php";
+        $pag[10] = "categoria/editar_categoria.php";
 
         if(isset($_GET['link'])){
           $link = $_GET['link'];

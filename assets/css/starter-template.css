@@ -1,6 +1,6 @@
 body {
   	padding-top: 5rem;
-  	background-color: #EFF5FB !important;
+  	background-color: #636b6f !important;
 }
 .starter-template {
 	padding: 3rem 1.5rem;
@@ -30,7 +30,7 @@ h2{
 	display: flex;
 	justify-content: center;
 }
-.incluirUsuario{
+.incluirUsuario, .incluirCategoria{
 	margin-bottom: 20px !important;
 	text-align: right;
 }
