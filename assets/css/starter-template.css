@@ -16,12 +16,18 @@ h2{
 .recuperaSenha{
 	margin-top: 20px;
 }
+.coltabela{
+	vertical-align: middle !important;
+	padding: 0 !important;
+}
 .botoes{
 	display: flex;
 	justify-content: center;
+	padding-top: 10px !important;
 }
-.btnCadastrar{
-	margin-right: 20px;
+.btnCadastrar,
+.btnCadastrarCategoria{
+	margin-right: 20px !important;
 }
 .btnEditar{
 	margin-right: 20px !important;

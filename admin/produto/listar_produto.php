@@ -44,11 +44,13 @@
             <tbody>
             <?php while ($produto =  mysqli_fetch_array($resultado)){?>
                 <tr id="<?php echo $produto['id']; ?>">
-                    <td class="text-center"><?php echo $produto['imagem']; ?></td>
-                    <td class="text-center"><?php echo $produto['id']; ?></td>
-                    <td class="text-center"><?php echo $produto['nome']; ?></td>
-                    <td class="text-center"><?php echo $produto['descricao_curta']; ?></td>
-                    <td class="text-center botoes">
+                    <td class="text-center coltabela">
+                      <img src="../assets/imagens/produtos/<?php echo $produto['imagem']; ?> " width='50' height='50'>
+                    </td>
+                    <td class="text-center coltabela"><?php echo $produto['id']; ?></td>
+                    <td class="text-center coltabela"><?php echo $produto['nome_produto']; ?></td>
+                    <td class="text-center coltabela"><?php echo $produto['descricao_curta']; ?></td>
+                    <td class="text-center botoes coltabela">
                         <a href="administrativo.php?link=14&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-info btn-sm mr-2">Visualizar</button></a>
                         <a href="administrativo.php?link=15&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-warning btn-sm mr-2">Editar</button></a>
                         <?php if($_SESSION['nivel_acesso'] == 1) {?>  
