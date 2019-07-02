@@ -1,5 +1,5 @@
 <?php
-    require_once("conexao.php");
+    require_once("../conexao.php");
     session_start();
     
     //Não permite acessar a página diretamente pelo endereço
@@ -22,14 +22,14 @@
 
                 if($categoria){
                     $_SESSION['msg'] = "<p class='alert alert-success alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Categoria cadastrada com sucesso.</p>";
-                    header("Location: ../administrativo.php?link=9");
+                    header("Location: ../../administrativo.php?link=9");
                 }else{
                     $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Não foi possível cadastrar a categoria, tente novamente..</p>";
-                    header("Location: ../administrativo.php?link=9");
+                    header("Location: ../../administrativo.php?link=9");
                 }   
         } else{
             $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Categoria já cadastrada. Informe uma nova categoria.</p>";
-            header("Location: ../administrativo.php?link=8");
+            header("Location: ../../administrativo.php?link=8");
         }
     }else{
         $_SESSION['msg'] = "<p class='alert alert-danger alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Página não encontrada.</p>";

@@ -42,3 +42,6 @@ h2{
 	margin-bottom: 20px !important;
 	text-align: right;
 }
+.form-control{
+	height: 80% !important;
+}

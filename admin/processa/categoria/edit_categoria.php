@@ -1,5 +1,5 @@
 <?php
-    require_once("conexao.php");
+    require_once("../conexao.php");
     session_start();
     //Não permite acessar a página diretamente pelo endereço
     $btnEditar = filter_input(INPUT_POST, 'btnEditar', FILTER_SANITIZE_STRING);
@@ -19,10 +19,10 @@
 
             if($resultado){
                 $_SESSION['msg'] = "<p class='alert alert-success alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Categoria editada com sucesso.</p>";
-                header("Location: ../administrativo.php?link=9");
+                header("Location: ../../administrativo.php?link=9");
             }else{
                 $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Não foi possível editar essa categoria, tente novamente..</p>";
-                header("Location: ../administrativo.php?link=9");
+                header("Location: ../../administrativo.php?link=9");
             }
         }
 

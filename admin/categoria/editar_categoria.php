@@ -33,7 +33,7 @@
 				}
 				?>
 			</div>
-			<form class="form-horizontal" method="POST" action="processa/edit_categoria.php">
+			<form class="form-horizontal" method="POST" action="processa/categoria/edit_categoria.php">
 
 				<div class="form-group">
 					<label for="nome_categoria" class="col-sm-2 control-label"><b>Nome</b></label>

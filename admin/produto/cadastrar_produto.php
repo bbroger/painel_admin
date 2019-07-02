@@ -65,7 +65,7 @@ $resultado = mysqli_query($conn, $query);
 
 				<div class="form-group">
 					<label for="imagem" class="col-sm-2 control-label"><b>Imagem</b></label>
-					<div class="col-sm-12">
+					<div class="col-sm-12 imgProduto">
 						<input type="file" name="imagem" class="form-control" id="imagem" placeholder="Inclua a imagem do produto" required="required">
 					</div>
 				</div>
