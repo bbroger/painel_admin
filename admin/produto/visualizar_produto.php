@@ -9,65 +9,71 @@
 
     $id = $_GET['id'];
     
-    $queryIdUsuario = " SELECT usuarios.id, usuarios.nome, usuarios.email, usuarios.login, usuarios.senha, usuarios.nivel_acesso_id as id_acesso, nivel_acesso.nivel_acesso
-                            FROM painel_admin.usuarios
-                            INNER JOIN painel_admin.nivel_acesso
-                            WHERE nivel_acesso.id = usuarios.nivel_acesso_id
-                            AND usuarios.id = $id
+    $queryProduto = " SELECT produtos.id as id_produto, produtos.nome_produto, produtos.descricao_curta, produtos.descricao_longa, produtos.tag, produtos.description, produtos.imagem, produtos.categoria_id, categoria.id as id_categoria, categoria.nome_categoria
+                            FROM produtos
+                            INNER JOIN categoria
+                            WHERE produtos.id = $id
+                            AND produtos.categoria_id = categoria.id
                             LIMIT 1; ";
-    $resultado = mysqli_query($conn, $queryIdUsuario);
-    $usuario =  mysqli_fetch_array($resultado);
-  
+
+    $resultado = mysqli_query($conn, $queryProduto);
+    $produto =  mysqli_fetch_array($resultado);
 ?>
 
     <div class="container theme-showcase" role="main">
         <div class="page-header col-sm-10 text-center">
-            <h1>Dados do Usuário</h1>
+            <h1>Dados do Produto</h1>
         </div>
         <div class="row">
             <div class="col-md-8 offset-md-3">
-                <form class="form-horizontal"> 
+                <form class="form-horizontal">
                     <div class="form-group">
-                        <label for="nome" class="col-sm-2 control-label"><b>Nome:</b></label>
-                        <label for="nome" class="control-label"><?php echo $usuario['nome']; ?></label>
+                        <label for="nome" class="col-sm-4 control-label"><b>Imagem:</b></label>
+                        <img src="../assets/imagens/produtos/<?php echo $produto['imagem']; ?>" class="col-sm-2">
                     </div>
 
                     <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label"><b>Email:</b></label>
-                        <label for="email" class="control-label"><?php echo $usuario['email']; ?></label>
+                        <label for="nome" class="col-sm-4 control-label"><b>Nome:</b></label>
+                        <label for="nome" class="control-label"><?php echo $produto['nome_produto']; ?></label>
                     </div>
 
                     <div class="form-group">
-                        <label for="login" class="col-sm-2 control-label"><b>Login:</b></label>
-                        <label for="login" class="control-label"><?php echo $usuario['login']; ?></label>
+                        <label for="descricaoCurta" class="col-sm-4 control-label"><b>Descricao Curta:</b></label>
+                        <label for="descricaoCurta" class="control-label"><?php echo $produto['descricao_curta']; ?></label>
                     </div>
 
                     <div class="form-group">
-                        <label for="nivel_acesso" class="col-sm-2 control-label"><b>Acesso:</b></label>
-                        <label for="nivel_acesso" class="control-label"><?php echo $usuario['nivel_acesso']; ?></label>
+                        <label for="descricaoLonga" class="col-sm-4 control-label"><b>Descricao longa:</b></label>
+                        <label for="descricaoLonga" class="control-label"><?php echo $produto['descricao_longa']; ?></label>
                     </div>
 
+                    <div class="form-group">
+                        <label for="tag" class="col-sm-4 control-label"><b>Tag:</b></label>
+                        <label for="tag" class="control-label"><?php echo $produto['tag']; ?></label>
+                    </div>
+
+                    
                     <div class="form-group botoesVisualizar col-sm-6">
                         <div class="text-center">
-                            <a href="administrativo.php?link=5&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-warning mr-2">Editar</button></a>
+                            <a href="administrativo.php?link=15&id=<?php echo $produto['id_produto']; ?>"><button type="button" class="btn btn-warning mr-2">Editar</button></a>
                         </div>
                         <?php if($_SESSION['nivel_acesso'] == 1) {?>
                             <div class="text-center">
                                 <div class="text-center">
-                                    <a class="delete" id="<?php echo $usuario['id'];?>"><button type="button" class="btn btn-danger mr-2 btnExcluir" name="btnExcluir" value="excluir">Excluir</button></a>
+                                    <a class="delete" id="<?php echo $produto['id_produto'];?>"><button type="button" class="btn btn-danger mr-2 btnExcluir" name="btnExcluir" value="excluir">Excluir</button></a>
                                 </div>
                             </div>
                         <?php } ?>
                         
                         <div class="text-center">
-                            <a href="administrativo.php?link=2"><button type="button" class="btn btn-secondary mr-2">Voltar</button></a>
+                            <a href="administrativo.php?link=13"><button type="button" class="btn btn-secondary mr-2">Voltar</button></a>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div> <!-- /container -->
-    <!-- Modal -->
+    <!-- Modal Excluir-->
     <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

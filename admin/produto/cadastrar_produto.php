@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-if( !isset($_SESSION['id']) || !isset($_SESSION['nome']) ){
+if (!isset($_SESSION['id']) || !isset($_SESSION['nome'])) {
 	unset($_COOKIE['session']);
 	unset($_SESSION['id']);
 	unset($_SESSION['nome']);
@@ -15,12 +15,12 @@ $resultado = mysqli_query($conn, $query);
 <div class="container theme-showcase" role="main">
 	<div class="page-header text-center">
 		<h1>Cadastrar Produto</h1>
-  	</div>
-  	<div class="row">
+	</div>
+	<div class="row">
 		<div class="col-md-12">
 			<div class="msg">
 				<?php
-				if(isset($_SESSION['msg'])){
+				if (isset($_SESSION['msg'])) {
 					echo $_SESSION['msg'];
 					unset($_SESSION['msg']);
 				}
@@ -76,7 +76,7 @@ $resultado = mysqli_query($conn, $query);
 						<select class="form-control" name="categoria">
 							<option>Selecione...</option>
 							<?php while ($categoria =  mysqli_fetch_array($resultado)) { ?>
-							<option value="<?php echo $categoria['id'];?>"><?php echo $categoria['nome_categoria'];?></option>
+								<option value="<?php echo $categoria['id']; ?>"><?php echo $categoria['nome_categoria']; ?></option>
 							<?php } ?>
 						</select>
 					</div>
@@ -92,7 +92,7 @@ $resultado = mysqli_query($conn, $query);
 					<div class="btnVoltar">
 						<a href="administrativo.php?link=13"><input type="button" name="btnVoltar" class="btn btn-secondary" value="Voltar"></a>
 					</div>
-					
+
 				</div>
 			</form>
 		</div>

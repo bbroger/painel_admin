@@ -51,10 +51,10 @@
                     <td class="text-center coltabela"><?php echo $produto['nome_produto']; ?></td>
                     <td class="text-center coltabela"><?php echo $produto['descricao_curta']; ?></td>
                     <td class="text-center botoes coltabela">
-                        <a href="administrativo.php?link=14&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-info btn-sm mr-2">Visualizar</button></a>
-                        <a href="administrativo.php?link=15&id=<?php echo $usuario['id']; ?>"><button type="button" class="btn btn-warning btn-sm mr-2">Editar</button></a>
+                        <a href="administrativo.php?link=14&id=<?php echo $produto['id']; ?>"><button type="button" class="btn btn-info btn-sm mr-2">Visualizar</button></a>
+                        <a href="administrativo.php?link=15&id=<?php echo $produto['id']; ?>"><button type="button" class="btn btn-warning btn-sm mr-2">Editar</button></a>
                         <?php if($_SESSION['nivel_acesso'] == 1) {?>  
-                        <a class="delete_produto" id="<?php echo $usuario['id'];?>"><button type="button" class="btn btn-danger btn-sm mr-2 btnExcluir" name="btnExcluir" value="excluir">Excluir</button></a>
+                        <a class="delete_produto" id="<?php echo $produto['id'];?>"><button type="button" class="btn btn-danger btn-sm mr-2 btnExcluir" name="btnExcluir" value="excluir">Excluir</button></a>
                       <?php } ?>
                     </td>
                 </tr>

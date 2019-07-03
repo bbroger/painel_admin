@@ -35,21 +35,21 @@
 			<form class="form-horizontal" method="POST" action="processa/edit_usuario.php">
 
 				<div class="form-group">
-					<label for="nome" class="col-sm-2 control-label"><b>Nome</b></label>
+					<label for="nome" class="col-sm-2 control-label"><b>Nome:</b></label>
 					<div class="col-sm-12">
 						<input type="text" name="nome" class="form-control" id="nome" value="<?php echo $usuario['nome']?>" required="required">
 					</div>
 				</div>
 
 				<div class="form-group">
-					<label for="inputEmail3" class="col-sm-2 control-label"><b>Email</b></label>
+					<label for="inputEmail3" class="col-sm-2 control-label"><b>Email:</b></label>
 					<div class="col-sm-12">
 						<input type="email" name="email" class="form-control" id="inputEmail3" value="<?php echo $usuario['email']?>" required="required">
 					</div>
 				</div>
 
 				<div class="form-group">
-					<label for="login" class="col-sm-2 control-label"><b>Login</b></label>
+					<label for="login" class="col-sm-2 control-label"><b>Login:</b></label>
 					<div class="col-sm-12">
 						<input type="text" name="login" class="form-control" id="login" value="<?php echo $usuario['login']?>" required="required">
 					</div>
@@ -57,7 +57,7 @@
 
 				<?php if($admin['nivel_acesso_id'] == 1){?>
 					<div class="form-group">
-						<label for="nivel_acesso" class="col-sm-2 control-label"><b>Nível de acesso</b></label>
+						<label for="nivel_acesso" class="col-sm-2 control-label"><b>Nível de acesso:</b></label>
 						<div class="col-sm-12">
 							<select class="form-control" name="nivel_acesso">
 								<option value="1" <?php if($usuario['nivel_acesso_id'] == 1){echo "selected";}?>>Administrativo</option>
@@ -67,13 +67,13 @@
 					</div>
 				<?php }else{ ?>
 					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
+						<label for="inputPassword3" class="col-sm-2 control-label"><b>Senha</b></label>
 						<div class="col-sm-10">
 							<input type="password" name="senha" class="form-control" id="inputPassword3" placeholder="Senha" disabled="disabled">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="nivel_acesso" class="col-sm-2 control-label">Nível de acesso</label>
+						<label for="nivel_acesso" class="col-sm-2 control-label"><b>Nível de acesso:</b></label>
 						<div class="col-sm-10">
 							<select class="form-control" name="nivel_acesso">
 								<option value="<?php echo $usuario['nivel_acesso_id']?>">
