@@ -16,9 +16,9 @@ function excluirUsuario() {
                     $('#btnConfirmar').prop("disabled", true);
                     $('#confirm-delete').modal('hide');
                     $('tr#' + id).remove();
+                    window.location.replace("administrativo.php?link=2")
                 }
-            });
-            window.location.replace("administrativo.php?link=2")
+            });            
         });
     });
 }
@@ -44,7 +44,31 @@ function excluirCategoria() {
                     window.location.replace("administrativo.php?link=9");
                 }
             });
+        });
+    });
+}
 
+function excluirProduto() {
+    $('a.delete_produto').click(function () {
+
+        var id = $(this).prop('id');
+        var btn = $('.btnExcluir').prop('name');
+
+        $('#confirm-delete').modal('show');
+
+        $('#confirm-delete').modal().find('.btn-confirmar').on('click', function () {
+            $.ajax({
+                type: "POST",
+                url: "processa/produto/excluir_produto.php",
+                data: { 'id': id, 'btn': btn },
+                cache: false,
+                success: function () {
+                    $('#btnConfirmar').prop("disabled", true);
+                    $('#confirm-delete').modal('hide');
+                    $('tr#' + id).remove();
+                    window.location.replace("administrativo.php?link=13");
+                }
+            });
         });
     });
 }
@@ -74,6 +98,7 @@ function tabelas() {
 window.onload = function () {
     excluirUsuario();
     excluirCategoria();
+    excluirProduto();
     fecharMSGSuccess();
     fecharMSGDanger();
     fecharMSGWarning();

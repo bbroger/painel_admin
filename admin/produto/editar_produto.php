@@ -38,10 +38,10 @@ $resultadoCategoria = mysqli_query($conn, $queryCategoria);
 				}
 				?>
 			</div>
-			<form class="form-horizontal" enctype="multipart/form-data" method="POST" action="../processa/produto/edit_produto.php">
+			<form class="form-horizontal" enctype="multipart/form-data" method="POST" action="processa/produto/edit_produto.php">
                 <div class="form-group">
                     <label for="imagem" class="col-sm-4 control-label"><b>Imagem:</b></label>
-                    <img src="../assets/imagens/produtos/<?php echo $produto['imagem']; ?>" class="col-sm-2">
+                    <img src="../assets/imagens/produtos/<?php echo $produto['imagem']; ?>" height="100" width="100">
                 </div>
 
 				<div class="form-group">
@@ -53,6 +53,7 @@ $resultadoCategoria = mysqli_query($conn, $queryCategoria);
                     <label for="nome" class="col-sm-4 control-label"><b>Nome:</b></label>
 					<div class="col-sm-12">
 						<input type="text" name="nome" class="form-control" id="nome" value="<?php echo $produto['nome_produto']; ?>" required="required">
+						<input type="text" name="id_produto" class="form-control" id="id_produto" value="<?php echo $produto['id_produto']; ?>" hidden>
 					</div>
                 </div>
 
@@ -67,6 +68,13 @@ $resultadoCategoria = mysqli_query($conn, $queryCategoria);
                     <label for="descricaoLonga" class="col-sm-4 control-label"><b>Descricao longa:</b></label>
                     <div class="col-sm-12">
 						<input type="text" name="descricaoLonga" class="form-control" id="descricaoLonga" value="<?php echo $produto['descricao_longa']; ?>" required="required">
+					</div>
+                </div>
+
+				<div class="form-group">
+                    <label for="description" class="col-sm-4 control-label"><b>Description:</b></label>
+                    <div class="col-sm-12">
+						<input type="text" name="description" class="form-control" id="description" value="<?php echo $produto['description']; ?>" required="required">
 					</div>
                 </div>
 
@@ -92,7 +100,7 @@ $resultadoCategoria = mysqli_query($conn, $queryCategoria);
 
                 <div class="form-group botoesVisualizar">
                     <div class="text-center">
-                        <a href="administrativo.php?link=15&id=<?php echo $produto['id_produto']; ?>"><button type="button" class="btn btn-success mr-2">Editar</button></a>
+                        <button type="submit" name="btnEditar" value="btnEditar" class="btn btn-success mr-2">Editar</button>
                     </div>                        
                     <div class="text-center">
                         <a href="administrativo.php?link=13"><button type="button" class="btn btn-secondary mr-2">Voltar</button></a>

@@ -35,14 +35,13 @@
       </div>
   <?php if($rowCount != 0){?>
 
-        <table class="table table-hover">
+        <table class="table table-hover tablesorter">
             <thead>
               <tr>
                 <th class="text-center">Nome</th>
                 <th class="text-center">Usuário</th>
                 <th class="text-center">Email</th>
                 <th class="text-center">Acesso</th>
-                <th class="text-center">Ações</th>
             </tr>
             </thead>
             <tbody>

@@ -38,7 +38,6 @@ $resultado = mysqli_query($conn, $sql);
                             <th class="text-center">Nome</th>
                             <th class="text-center">Data de Criação</th>
                             <th class="text-center">Última Alteração</th>
-                            <th class="text-center">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
