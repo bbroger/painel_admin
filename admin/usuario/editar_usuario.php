@@ -32,7 +32,7 @@
 				}
 				?>
 			</div>
-			<form class="form-horizontal" method="POST" action="processa/edit_usuario.php">
+			<form class="form-horizontal" method="POST" action="processa/usuario/edit_usuario.php">
 
 				<div class="form-group">
 					<label for="nome" class="col-sm-2 control-label"><b>Nome:</b></label>

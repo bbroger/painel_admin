@@ -31,17 +31,17 @@ require_once("processa/conexao.php");
             $pag[3] = "usuario/cadastrar_usuario.php";
             $pag[4] = "usuario/visualizar_usuario.php";
             $pag[5] = "usuario/editar_usuario.php";
-            $pag[6] = "processa/excluir_usuario.php";
+            $pag[6] = "processa/usuario/excluir_usuario.php";
             $pag[7] = "recuperar_senha.php";
             $pag[8] = "categoria/cadastrar_categoria.php";
             $pag[9] = "categoria/listar_categoria.php";
             $pag[10] = "categoria/editar_categoria.php";
-            $pag[11] = "processa/excluir_categoria.php";
+            $pag[11] = "processa/categoria/excluir_categoria.php";
             $pag[12] = "produto/cadastrar_produto.php";
             $pag[13] = "produto/listar_produto.php";
             $pag[14] = "produto/visualizar_produto.php";
             $pag[15] = "produto/editar_produto.php";
-            $pag[16] = "processa/excluir_produto.php";
+            $pag[16] = "processa/produto/excluir_produto.php";
 
             if (isset($_GET['link'])) {
                 $link = $_GET['link'];

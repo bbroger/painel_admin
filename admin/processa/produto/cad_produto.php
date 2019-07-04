@@ -7,10 +7,10 @@
 
     if($btnCadastrar){
         //captura as informações enviadas via POST
-        $nome = filter_input(INPUT_POST, 'nome_produto', FILTER_SANITIZE_STRING);
+        $nome = ucwords(strtolower(filter_input(INPUT_POST, 'nome_produto', FILTER_SANITIZE_STRING)));
         $descricao_curta = filter_input(INPUT_POST, 'descricaoCurta', FILTER_SANITIZE_STRING);
         $descricao_longa = filter_input(INPUT_POST, 'descricaoLonga', FILTER_SANITIZE_STRING);
-        $tag = filter_input(INPUT_POST, 'tag', FILTER_SANITIZE_STRING);
+        $tag = ucwords(strtolower(filter_input(INPUT_POST, 'tag', FILTER_SANITIZE_STRING)));
         $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
         $imagem = $_FILES['imagem'];
         $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_STRING);
@@ -59,11 +59,11 @@
                         if($produto){		
                             //deu certo
                             $_SESSION['msg'] = "<p class='alert alert-success alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Produto cadastrado com sucesso.</p>";
-                            header("Location: ../../administrativo.php?link=12");
+                            header("Location: ../../administrativo.php?link=13");
                         }else{
                             //deu errado
                             $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Não foi possível cadastrar o produto, tente novamente..</p>";
-                            header("Location: ../../administrativo.php?link=12");
+                            header("Location: ../../administrativo.php?link=13");
                         }
                     }
                 }

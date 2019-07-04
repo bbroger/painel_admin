@@ -7,7 +7,7 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['nome'])) {
     header("Location: ../index.php");
 }
 
-$sql = " SELECT * FROM categoria; ";
+$sql = " SELECT * FROM categoria ORDER BY nome_categoria ASC; ";
 
 $resultado = mysqli_query($conn, $sql);
 @$rowCount = mysqli_num_rows($resultado);

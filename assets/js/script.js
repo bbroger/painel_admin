@@ -9,7 +9,7 @@ function excluirUsuario() {
         $('#confirm-delete').modal().find('.btn-confirmar').on('click', function () {
             $.ajax({
                 type: "POST",
-                url: "processa/excluir_usuario.php",
+                url: "processa/usuario/excluir_usuario.php",
                 data: { 'id': id, 'btn': btn },
                 cache: false,
                 success: function () {
@@ -86,7 +86,7 @@ function fecharMSGDanger() {
 }
 
 function fecharMSGWarning() {
-    $(".alert-warning").delay(3000).slideUp(200, function () {
+    $(".alert-warning").delay(4000).slideUp(200, function () {
         $(this).alert('close');
     });
 }

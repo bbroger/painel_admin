@@ -7,8 +7,8 @@
 
     if($btnCadastrar){
         //captura as informações enviadas via POST
-        $nome = filter_input(INPUT_POST, 'nome_categoria', FILTER_SANITIZE_STRING);
-
+        $nome = ucwords(strtolower(filter_input(INPUT_POST, 'nome_categoria', FILTER_SANITIZE_STRING)));
+        
         $sql = " SELECT * FROM categoria WHERE nome_categoria = '$nome' LIMIT 1; ";
         $resultado = mysqli_query($conn, $sql);
         $row = mysqli_num_rows($resultado);

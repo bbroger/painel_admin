@@ -4,7 +4,7 @@
         unset($_SESSION['id']);
         unset($_SESSION['nome']);
         $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Preencha os campos Usuário e Senha</p>";
-        header("Location: index.php");
+        header("Location: ../index.php");
     }
 
     $id = $_GET['id'];
@@ -66,7 +66,7 @@
                         <?php } ?>
                         
                         <div class="text-center">
-                            <a href="administrativo.php?link=16"><button type="button" class="btn btn-secondary mr-2">Voltar</button></a>
+                            <a href="administrativo.php?link=13"><button type="button" class="btn btn-secondary mr-2">Voltar</button></a>
                         </div>
                     </div>
                 </form>

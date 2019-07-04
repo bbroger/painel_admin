@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once("conexao.php");
+    require_once("../conexao.php");
     
     $btnExcluir = filter_input(INPUT_POST, 'btn', FILTER_SANITIZE_STRING);
     $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
