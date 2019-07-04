@@ -1,14 +1,6 @@
 <?php
-session_start();
-require_once("processa/conexao.php");
-
-    if( !isset($_SESSION['id']) || !isset($_SESSION['nome']) ){
-        unset($_COOKIE['session']);
-        unset($_SESSION['id']);
-        unset($_SESSION['nome']);
-        $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Preencha os campos Usuário e Senha</p>";
-        header("Location: index.php");
-    }
+    session_start();
+    require_once("processa/conexao.php");
 ?>
 <!doctype html>
 <html lang="pt-br">

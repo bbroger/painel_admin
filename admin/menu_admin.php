@@ -1,3 +1,13 @@
+<?php
+    if( !isset($_SESSION['id']) || !isset($_SESSION['nome']) ){
+        unset($_COOKIE['session']);
+        unset($_SESSION['id']);
+        unset($_SESSION['nome']);
+        $_SESSION['msg'] = "<p class='alert alert-warning alert-dismissible text-center'><a href='' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Preencha os campos Usuário e Senha</p>";
+        header("Location: index.php");
+    }
+?>
+
 <!-- Início navbar -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="administrativo.php">Painel</a>

@@ -40,11 +40,11 @@
                     <input class="btn btn-lg btn-primary btn-block" type="submit" name="btnLogin" value="Acessar">
                 </form>
             </div>
-        </div>
-        <div class="recuperaSenha text-center">
-            <label>Recupere sua senha clicando <a href="administrativo.php?link=7"><b>aqui</b>.</a></label>
         </div>	
     </div> <!-- /container -->
+    <div class="recuperaSenha text-center">
+        <label>Recupere sua senha clicando <a href="recuperar_senha.php"><b>aqui</b>.</a></label>
+    </div>
 
     <script src="../assets/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
