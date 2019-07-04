@@ -60,13 +60,13 @@
                         <?php if($_SESSION['nivel_acesso'] == 1) {?>
                             <div class="text-center">
                                 <div class="text-center">
-                                    <a class="delete" id="<?php echo $produto['id_produto'];?>"><button type="button" class="btn btn-danger mr-2 btnExcluir" name="btnExcluir" value="excluir">Excluir</button></a>
+                                    <a class="delete_produto" id="<?php echo $produto['id_produto'];?>"><button type="button" class="btn btn-danger mr-2 btnExcluir" name="btnExcluir" value="excluir">Excluir</button></a>
                                 </div>
                             </div>
                         <?php } ?>
                         
                         <div class="text-center">
-                            <a href="administrativo.php?link=13"><button type="button" class="btn btn-secondary mr-2">Voltar</button></a>
+                            <a href="administrativo.php?link=16"><button type="button" class="btn btn-secondary mr-2">Voltar</button></a>
                         </div>
                     </div>
                 </form>
@@ -78,13 +78,13 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Excluir usuário</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Excluir produto</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Deseja realmente excluir esse usuário?</p>
+                    <p>Deseja realmente excluir esse produto?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary btn-confirmar">Confirmar</button>

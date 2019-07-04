@@ -1,7 +1,13 @@
+<!-- Início navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Painel</a>
+	<a class="navbar-brand" href="index.php">Entrar</a>
+</nav>
+<!-- Fim navbar -->
 <div class="container-fluid">
 	<div class="container">
 		<div class="row text-center py-5">
-			<form action="processa/recupera_senha.php" method="post" class="w-100">
+			<form action="processa/admin/recupera_senha.php" method="post" class="w-100">
 				<div class="col-12">
 					<div class="dadosCadastro dadosUsuario">											
 						<div class="col-12">

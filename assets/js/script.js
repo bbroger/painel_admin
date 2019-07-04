@@ -92,7 +92,9 @@ function fecharMSGWarning() {
 }
 
 function tabelas() {
-    $(".tablesorter").tablesorter();
+    $(".tablesorter").tablesorter({
+        dateFormat : "ddmmyyyy",
+    });
 }
 
 window.onload = function () {
