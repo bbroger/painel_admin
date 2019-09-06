@@ -8,8 +8,8 @@
     }
 
     $sql = " SELECT usuarios.id, usuarios.nome, usuarios.email, usuarios.login, usuarios.nivel_acesso_id as id_acesso, nivel_acesso.nivel_acesso
-                FROM painel_admin.usuarios
-                INNER JOIN painel_admin.nivel_acesso
+                FROM usuarios
+                INNER JOIN nivel_acesso
                 WHERE nivel_acesso.id = usuarios.nivel_acesso_id
                 ORDER BY usuarios.nome ASC; ";
 

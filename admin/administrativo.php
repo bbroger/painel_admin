@@ -37,6 +37,7 @@
 
             if (isset($_GET['link'])) {
                 $link = $_GET['link'];
+                var_dump($link); exit;
                 if (file_exists($pag[$link])) {
                     if ($pag[$link] == 7) {
                         $pag[7];
