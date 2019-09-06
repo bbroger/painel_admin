@@ -46,7 +46,7 @@ date_default_timezone_set('America/Sao_Paulo');
 		$mail->Username = 'bb.roger.bb@gmail.com';
 
 		//Informe a senha do seu e-mail
-		$mail->Password = '14725800r';
+		$mail->Password = '';
 
 		//Set who the message is to be sent from
 		$mail->From = ('bb.roger.bb@gmail.com');
